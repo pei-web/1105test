@@ -1,0 +1,49 @@
+body {
+    /* background-color: rgba(255, 214, 78, 0.342); */
+    position: relative;
+}
+input[type=text] {
+    width: 90%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon1.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+#eicon {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+#dicon {
+    position: absolute;;
+    right: 0%;
+    top: 0.6%;
+}
+#orignal {
+    /* margin: 0 100px; */
+    text-align:"center";
+    border: 1px solid  #575757;
+    /* background-color: rgb(196,241,190,0.5); */
+}
+#tab{
+    border: 1px solid  #575757;
+}
+#header{
+    background-color: #83838393;
+}
+#ans_show {
+    background-color: rgb(196,241,190,0.5);
+    text-align: justify;
+}
+#anstab{
+    border: 1.5px solid  #1f1d1d;
+}
+#return {
+    float: right;
+    font-size: 20px;
+}
