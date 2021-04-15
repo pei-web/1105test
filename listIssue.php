@@ -3,6 +3,11 @@
     require("dbconnect.php");
     $sql = "SELECT * FROM `version`;";
     $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
+    if (isset($_GET['m'])){
+        $msg="<font color='red'>" . $_GET['m'] . "</font>";
+    } else {
+        $msg="Good morning";
+    }
 ?> 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +20,10 @@
 </head>
 <body>
     <h2>Issue List</h2>
-    <input type="text" name="search" placeholder="Search.." id="search">
-    <button>搜尋</button>
+    <form name="isssearch" method="POST" action="issueModel.php">
+        <input type="text" name="search" placeholder="Search.." id="search">
+        <input type="submit" value="搜尋">
+    </form>
     <div id="ori">
         <table id="orignal">
         <tr id="header">
@@ -31,6 +38,7 @@
             <td>IssueFunction3</td>
             <td>TestDescription</td>
             <td>FailRate</td>
+            <td>Edittime</td>
         </tr>
         <?php
         while ($rs=mysqli_fetch_assoc($result)) {
@@ -45,7 +53,7 @@
             echo "<td id='tab'>" . $rs['IssueFunct3'] . "</td>";
             echo "<td id='tab'>" . $rs['Description'] . "</td>";
             echo "<td id='tab'>" . $rs['FailRate']. "</td>"; 
-            echo "<td id='tab'>" . "<a href ='editform.html?id={$rs['ID']}'>編輯</a>" . "</td>";
+            echo "<td id='tab'>" . $rs['edit']. "<a href ='editIssue.php?id={$rs['ID']}'>編輯</a>" . "</td>";
             echo "</tr>";
             // echo "<a href = 'Todoset.php?id={$rs['id']}'>OK</a>" . "</td>";
         }

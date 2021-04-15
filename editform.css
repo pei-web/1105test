@@ -1,0 +1,69 @@
+body{
+    position: relative;
+}
+.edit{
+    margin: 5px;        
+    width: 95%;
+    height: 630px;
+    padding: 10px;
+}
+.bcolor{
+    position: absolute;
+    left: 4%;
+    width: 26%;
+    height: 600px;
+    float: left;
+    background-image: linear-gradient(to bottom right,#96fbc4,#f9f586);
+    border-radius: 30px 5px 5px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bcolor p{
+    font-size: 350%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.bcolor img {
+    position: absolute;
+    left: 32%;
+    bottom: 1.5%;
+}
+.editform {
+    position: absolute;
+    left: 30%;
+    bottom: 5.5%;
+    width: 62%;
+    height: 559px; 
+    border-radius: 5px 30px 30px 5px;
+    border: 2px solid grey; 
+    padding: 20px;
+}
+input{
+    width: 60%;
+    padding: 4px;
+}
+#modname{
+    width: 20%;
+}
+#status {
+    width: 25%;
+}
+#sub {
+    position: absolute;
+    left: 50%;
+    width: 20%;
+}
+#modType{
+    width: 30%;
+}
+#modConn{
+    width: 30%;
+}
+#fRate {
+    width: 15%;
+}
+label{
+    width: 95px;
+    display: inline-block;
+    text-align: left;
+}

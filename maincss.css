@@ -14,11 +14,10 @@ input[type=text] {
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
-#eicon {
-    position: absolute;
-    right: 0%;
-    top: 0%;
-}
+/* #editpic {
+    width: 15px;
+    height: 15px;
+} */
 #dicon {
     position: absolute;;
     right: 0%;
