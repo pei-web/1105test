@@ -1,21 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddISSU</title>
-    <link rel="stylesheet" type="text/css" href="addform.css">
+    <title>AddISSUE</title>
+    <link rel="stylesheet" type="text/css" href="add.css"/>
 </head>
 <body>
 <h1>Add new Issue</h1>
     <div class="addform">
-    <form class="addisssue">
+    <form class="addisssue" method="POST" action="addCon.php">
         <h3>Headset Information</h3>
         <hr />
         <div lass="item">
             <label>Model：</label>
-            <input type="text" id="modname" name="modname">
+            <input type="text" id="mod" name="mod">
         </div><br />
         <div class="item">
             <label>Model type：</label>
@@ -25,20 +26,15 @@
                 <option value="wireless/wired">Wireless/Wired</option>
             </select>
         </div><br />
-        <div class="connitem">
+        <div class="item">
             <label>Connection：</label>
-            <!-- <div class="connBtns">                
-                <button type="button" class="button1" name="modConn" value="Bluetooth">
-                    <img src="bluetooth.png" id="BT" name="BT">Bluetooth</button>
-                <button type="button" class="button1" name="modConn" value="dongle">
-                    <img src="dongle.png" id="dongle" name="dongle">Dongle</button>
-                <button type="button" class="button1" name="modConn" value="usb">
-                    <img src="USB.png" id="USB" name="usB">USB</button>
-                <button type="button" class="button1" name="modConn" value="usbcontroller">
-                    <img src="usbcon.png" id="USBcon" name="USBcon">USB Controller</button>
-            </div><br /> -->
-        </div>
-        <br />
+            <select id="modconn" name="modconn">
+                <option value="bluetooth">Bluetooth</option>
+                <option value="dongle">Dongle</option>
+                <option value="usb">USB</option>
+                <option value="usbcontrol">USB Control</option>
+            </select>
+        </div><br />
         <h3>Issue Information</h3>
         <hr />
         <div class="item">
@@ -51,15 +47,15 @@
         </div><br />
         <div class="item">
             <label>Issue function：</label>
-            <input type="text" id="issueFun" name="issueFun"><br />
+            <input type="text" id="issuef" name="issuef"><br />
         </div><br/>
         <div class="item">
             <label>Issue function2：</label>
-            <input type="text" id="issueFun2" name="issueFun2"><br />
+            <input type="text" id="issuef2" name="issuef2"><br />
         </div><br/>
         <div class="item">
             <label>Issue function3：</label>
-            <input type="text" id="issueFun3" name="issueFun3"><br />
+            <input type="text" id="issuef3" name="issuef3"><br />
         </div><br/>
         <div class="item">
             <label>Title/Test Description：</label>
@@ -67,10 +63,9 @@
         </div><br/>
         <div class="item">
             <label>Fail Rate：</label>
-            <input type="text" id="fRate" name="fRate"><br />
+            <input type="text" id="fail" name="fail"><br />
         </div><br/>
-        <button>送出</button>
-        <!-- <input type="submit" value="Submit"> -->
+        <input type="submit" value="送出" id="subm" >
     </form>
     </div>
 </body>

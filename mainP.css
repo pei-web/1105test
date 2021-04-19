@@ -16,8 +16,24 @@ input[type=text] {
 }
 #addbtn {
     position: absolute;
-    display: block;
     right: 0%;
+    top: 0%;
+    width: 5%;
+    height: 0.4%;
+    display: block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: #3b9a9c;
+    border:2px double white;
+}
+#addbtn a {
+    color: #fef4a9;
+    text-align: center;
+    text-decoration:none;
+}
+#addbtn a:hover {
+    text-decoration:underline;
 }
 #orignal {
     /* margin: 0 100px; */
