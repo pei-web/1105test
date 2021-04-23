@@ -1,0 +1,27 @@
+body {
+    background-color: rgba(149, 186, 211, 0.664);
+    position: relative;
+}
+.password {
+    color: #d64f4a;
+    font-size: 24px;
+}
+label {
+    /* color: #ffb6b9; */
+    /* width: 95%; */
+    display: inline;
+    text-align: left;
+    font-size: 20px;
+}
+#username {
+    /* width: 10%; */
+    height: 25px;
+    /* padding: 2%; */
+}
+.input {
+    position: absolute;
+    left: 5%;
+    border: 3px solid cornsilk;
+    padding: 10px;
+    border-radius: 10px;
+}

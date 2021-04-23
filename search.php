@@ -3,13 +3,25 @@
     require("issueModel.php");
 
     $input=mysqli_real_escape_string($conn,$_POST['search']);
-    // echo gettype($input);
+    // echo $input;
+    // echo "SELECT * from `version` WHERE `Model`='$input' or `Modtype`='$input' or `Connection`='$input' or `Device`REGEXP '$input' or `Staus`='$input' or `IssueFunct`='$input' or `IssueFunct2`='$input' or `IssueFunct3`='$input' or `Description` REGEXP '$input' or `FailRate`='$input';";
+    $result = find($input);
+    //多條件查詢
     // $val = array();
     // $val = explode(" ",$input);
     // for($i = 0;$i < count($val); $i++) {
-    //     echo $i . $val[$i] . "<br />";
+    //     echo $val[$i];
+    //     echo "\n";
     // }
-    $result = find($input);
+    // $stri = json_encode($val);
+    // // echo gettype($val);
+    // // echo gettype($stri);
+    // echo $stri;
+    // $revise = str_replace(array('[',']',),'',$stri);
+    // // $revise = str_replace('"','\'',$rev);
+    // echo $revise;
+    // echo "SELECT * from `version` WHERE `Model`IN ($revise) or `Modtype`IN ($revise) or `Connection`IN ($revise) or `Device`IN ($revise) or `Staus`IN ($revise) or `IssueFunct`IN ($revise) or `IssueFunct2`IN ($revise) or `IssueFunct3`IN ($revise) or `Description`IN ($revise) or `FailRate`IN ($revise);";
+    // $result = find($revise);
     
     // $sum = count($result);
     // echo $sum;
